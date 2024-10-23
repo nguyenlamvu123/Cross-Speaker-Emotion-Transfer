@@ -17,7 +17,7 @@ def get_model(args, configs, device, train=False, ignore_layers=[]):
             train_config["path"]["ckpt_path"],
             "{}.pth.tar".format(args.restore_step),
         )
-        model_dict = torch.load(ckpt_path)['model']
+        model_dict = torch.load(ckpt_path, map_location=device)['model']
         for ignore_layer in ignore_layers:
             model_dict = {k: v for k, v in model_dict.items()
                           if ignore_layer not in k}

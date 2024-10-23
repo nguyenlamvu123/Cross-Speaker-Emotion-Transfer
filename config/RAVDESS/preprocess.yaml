@@ -1,7 +1,7 @@
 dataset: "RAVDESS"
 
 path:
-  corpus_path: "/home/keon/speech-datasets/en/RAVDESS"
+  corpus_path: "./speech-datasets/en/RAVDESS/"
   lexicon_path: "lexicon/librispeech-lexicon.txt"
   raw_path: "./raw_data/RAVDESS"
   preprocessed_path: "./preprocessed_data/RAVDESS"
